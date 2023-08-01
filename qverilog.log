@@ -1,0 +1,237 @@
+Start time: 11:21:07 on Aug 01,2023
+qverilog -reportprogress 300 -guimode testbench.sv 
+** Note: (qverilog-2286) Using implicit +incdir+C:/questasim_10.4e/uvm-1.1d/../verilog_src/uvm-1.1d/src from import uvm_pkg
+-- Compiling interface alu_interface
+-- Compiling package testbench_sv_unit
+-- Importing package mtiUvm.uvm_pkg (uvm-1.1d Built-in)
+** Warning: alu_sequence.sv(21): (qverilog-2240) Treating stand-alone use of function 'randomize' as an implicit VOID cast.
+** Warning: alu_sequence.sv(47): (qverilog-2240) Treating stand-alone use of function 'randomize' as an implicit VOID cast.
+-- Compiling module alu
+-- Compiling interface alu_interface
+-- Compiling module top
+
+Top level modules:
+	top
+# ** Warning: alu_sequence.sv(47): (qverilog-2240) Treating stand-alone use of function 'randomize' as an implicit VOID cast.
+# 
+# -- Compiling module alu
+# -- Compiling interface alu_interface
+# -- Compiling module top
+# 
+# Top level modules:
+# 	top
+# End time: 11:21:08 on Aug 01,2023, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 2
+vsim -lib work testbench_sv_unit top -c -do {run -all; quit -sim} -appendlog -l qverilog.log -vopt -prevmsgcount 0,2,0,0 -usestarttime 7,21,11,1,7,123,2,212,0
+# vsim -lib work testbench_sv_unit top -c -do "run -all; quit -sim" -appendlog -l qverilog.log -vopt 
+# Start time: 11:21:09 on Aug 01,2023
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# 
+# ** Warning: testbench.sv(33): (vopt-2241) Connection width does not match width of port 'ALU_Out'. The port definition is at: alu_dut.sv(1).
+# 
+# ** Warning: alu_sequence.sv(21): (vopt-2240) Treating stand-alone use of function 'randomize' as an implicit VOID cast.
+# 
+# ** Warning: alu_sequence.sv(47): (vopt-2240) Treating stand-alone use of function 'randomize' as an implicit VOID cast.
+# 
+# Loading sv_std.std
+# Loading mtiUvm.uvm_pkg
+# Loading work.testbench_sv_unit(fast)
+# Loading work.top(fast)
+# Loading mtiUvm.questa_uvm_pkg(fast)
+# Loading work.alu_interface(fast)
+# Loading C:/questasim_10.4e/uvm-1.1d\win32\uvm_dpi.dll
+# run -all
+# ----------------------------------------------------------------
+# UVM-1.1d
+# (C) 2007-2013 Mentor Graphics Corporation
+# (C) 2007-2013 Cadence Design Systems, Inc.
+# (C) 2006-2013 Synopsys, Inc.
+# (C) 2011-2013 Cypress Semiconductor Corp.
+# ----------------------------------------------------------------
+# 
+#   ***********       IMPORTANT RELEASE NOTES         ************
+# 
+#   You are using a version of the UVM library that has been compiled
+#   with `UVM_NO_DEPRECATED undefined.
+#   See http://www.eda.org/svdb/view.php?id=3313 for more details.
+# 
+#   You are using a version of the UVM library that has been compiled
+#   with `UVM_OBJECT_MUST_HAVE_CONSTRUCTOR undefined.
+#   See http://www.eda.org/svdb/view.php?id=3770 for more details.
+# 
+#       (Specify +UVM_NO_RELNOTES to turn off this notice)
+# 
+# UVM_INFO verilog_src/questa_uvm_pkg-1.2/src/questa_uvm_pkg.sv(215) @ 0: reporter [Questa UVM] QUESTA_UVM-1.2.3
+# UVM_INFO verilog_src/questa_uvm_pkg-1.2/src/questa_uvm_pkg.sv(217) @ 0: reporter [Questa UVM]  questa_uvm::init(+struct)
+# UVM_INFO @ 0: reporter [RNTST] Running test alu_test...
+# alu select=x
+# alu select=1
+# alu select=0
+# UVM_INFO alu_scoreboard.sv(200) @ 1400: uvm_test_top.env.scb [COMPARE] Transaction Passed! ACT=  x, EXP=  8
+# alu select=1
+# alu select=1
+# UVM_INFO alu_scoreboard.sv(200) @ 2200: uvm_test_top.env.scb [COMPARE] Transaction Passed! ACT=  x, EXP= 19
+# alu select=3
+# alu select=3
+# UVM_INFO alu_scoreboard.sv(200) @ 3000: uvm_test_top.env.scb [COMPARE] Transaction Passed! ACT=  x, EXP=  2
+# alu select=2
+# alu select=1
+# UVM_INFO alu_scoreboard.sv(200) @ 3800: uvm_test_top.env.scb [COMPARE] Transaction Passed! ACT=  x, EXP= 50
+# alu select=0
+# alu select=0
+# UVM_INFO alu_scoreboard.sv(200) @ 4600: uvm_test_top.env.scb [COMPARE] Transaction Passed! ACT=  x, EXP= 28
+# alu select=2
+# alu select=1
+# UVM_INFO alu_scoreboard.sv(200) @ 5400: uvm_test_top.env.scb [COMPARE] Transaction Passed! ACT=  x, EXP=117
+# alu select=1
+# alu select=0
+# UVM_INFO alu_scoreboard.sv(200) @ 6200: uvm_test_top.env.scb [COMPARE] Transaction Passed! ACT=  x, EXP=  4
+# alu select=3
+# alu select=2
+# UVM_INFO alu_scoreboard.sv(200) @ 7000: uvm_test_top.env.scb [COMPARE] Transaction Passed! ACT=  x, EXP=  4
+# alu select=2
+# alu select=1
+# UVM_INFO alu_scoreboard.sv(200) @ 7800: uvm_test_top.env.scb [COMPARE] Transaction Passed! ACT=  x, EXP=150
+# alu select=0
+# alu select=2
+# UVM_INFO alu_scoreboard.sv(200) @ 8600: uvm_test_top.env.scb [COMPARE] Transaction Passed! ACT=  x, EXP= 23
+# alu select=0
+# alu select=0
+# UVM_INFO alu_scoreboard.sv(200) @ 9400: uvm_test_top.env.scb [COMPARE] Transaction Passed! ACT=  x, EXP= 15
+# alu select=1
+# alu select=1
+# UVM_INFO alu_scoreboard.sv(200) @ 10200: uvm_test_top.env.scb [COMPARE] Transaction Passed! ACT=  x, EXP=  8
+# alu select=1
+# alu select=3
+# UVM_INFO alu_scoreboard.sv(200) @ 11000: uvm_test_top.env.scb [COMPARE] Transaction Passed! ACT=  x, EXP=  6
+# alu select=0
+# alu select=1
+# UVM_INFO alu_scoreboard.sv(200) @ 11800: uvm_test_top.env.scb [COMPARE] Transaction Passed! ACT=  x, EXP= 14
+# alu select=1
+# alu select=1
+# UVM_INFO alu_scoreboard.sv(200) @ 12600: uvm_test_top.env.scb [COMPARE] Transaction Passed! ACT=  x, EXP= 14
+# alu select=2
+# alu select=2
+# UVM_INFO alu_scoreboard.sv(200) @ 13400: uvm_test_top.env.scb [COMPARE] Transaction Passed! ACT=  x, EXP=153
+# alu select=2
+# alu select=3
+# UVM_INFO alu_scoreboard.sv(200) @ 14200: uvm_test_top.env.scb [COMPARE] Transaction Passed! ACT=  x, EXP=130
+# alu select=3
+# alu select=0
+# UVM_INFO alu_scoreboard.sv(200) @ 15000: uvm_test_top.env.scb [COMPARE] Transaction Passed! ACT=  x, EXP=  1
+# alu select=2
+# alu select=3
+# UVM_INFO alu_scoreboard.sv(200) @ 15800: uvm_test_top.env.scb [COMPARE] Transaction Passed! ACT=  x, EXP= 44
+# alu select=0
+# alu select=1
+# UVM_INFO alu_scoreboard.sv(200) @ 16600: uvm_test_top.env.scb [COMPARE] Transaction Passed! ACT=  x, EXP= 25
+# alu select=1
+# alu select=0
+# UVM_INFO alu_scoreboard.sv(200) @ 17400: uvm_test_top.env.scb [COMPARE] Transaction Passed! ACT=  x, EXP=  7
+# alu select=0
+# alu select=0
+# UVM_INFO alu_scoreboard.sv(200) @ 18200: uvm_test_top.env.scb [COMPARE] Transaction Passed! ACT=  x, EXP= 17
+# alu select=1
+# alu select=3
+# UVM_INFO alu_scoreboard.sv(200) @ 19000: uvm_test_top.env.scb [COMPARE] Transaction Passed! ACT=  x, EXP= 10
+# alu select=1
+# alu select=0
+# UVM_INFO alu_scoreboard.sv(200) @ 19800: uvm_test_top.env.scb [COMPARE] Transaction Passed! ACT=  x, EXP= 17
+# alu select=1
+# alu select=0
+# UVM_INFO alu_scoreboard.sv(200) @ 20600: uvm_test_top.env.scb [COMPARE] Transaction Passed! ACT=  x, EXP=  3
+# alu select=3
+# alu select=3
+# UVM_INFO alu_scoreboard.sv(200) @ 21400: uvm_test_top.env.scb [COMPARE] Transaction Passed! ACT=  x, EXP=  2
+# alu select=2
+# alu select=0
+# UVM_INFO alu_scoreboard.sv(200) @ 22200: uvm_test_top.env.scb [COMPARE] Transaction Passed! ACT=  x, EXP= 14
+# alu select=2
+# alu select=3
+# UVM_INFO alu_scoreboard.sv(200) @ 23000: uvm_test_top.env.scb [COMPARE] Transaction Passed! ACT=  x, EXP=133
+# alu select=1
+# alu select=1
+# UVM_INFO alu_scoreboard.sv(200) @ 23800: uvm_test_top.env.scb [COMPARE] Transaction Passed! ACT=  x, EXP= 14
+# alu select=1
+# alu select=1
+# UVM_INFO alu_scoreboard.sv(200) @ 24600: uvm_test_top.env.scb [COMPARE] Transaction Passed! ACT=  x, EXP= 19
+# alu select=3
+# alu select=2
+# UVM_INFO alu_scoreboard.sv(200) @ 25400: uvm_test_top.env.scb [COMPARE] Transaction Passed! ACT=  x, EXP=  1
+# alu select=0
+# alu select=3
+# UVM_INFO alu_scoreboard.sv(200) @ 26200: uvm_test_top.env.scb [COMPARE] Transaction Passed! ACT=  x, EXP= 23
+# alu select=2
+# alu select=0
+# UVM_INFO alu_scoreboard.sv(200) @ 27000: uvm_test_top.env.scb [COMPARE] Transaction Passed! ACT=  x, EXP= 36
+# alu select=3
+# alu select=0
+# UVM_INFO alu_scoreboard.sv(200) @ 27800: uvm_test_top.env.scb [COMPARE] Transaction Passed! ACT=  x, EXP=  2
+# alu select=0
+# alu select=2
+# UVM_INFO alu_scoreboard.sv(200) @ 28600: uvm_test_top.env.scb [COMPARE] Transaction Passed! ACT=  x, EXP= 26
+# alu select=3
+# alu select=2
+# UVM_INFO alu_scoreboard.sv(200) @ 29400: uvm_test_top.env.scb [COMPARE] Transaction Passed! ACT=  x, EXP=  2
+# alu select=1
+# alu select=2
+# UVM_INFO alu_scoreboard.sv(200) @ 30200: uvm_test_top.env.scb [COMPARE] Transaction Passed! ACT=  x, EXP= 10
+# alu select=0
+# alu select=1
+# UVM_INFO alu_scoreboard.sv(200) @ 31000: uvm_test_top.env.scb [COMPARE] Transaction Passed! ACT=  x, EXP= 23
+# alu select=0
+# alu select=3
+# UVM_INFO alu_scoreboard.sv(200) @ 31800: uvm_test_top.env.scb [COMPARE] Transaction Passed! ACT=  x, EXP= 21
+# alu select=0
+# alu select=3
+# UVM_INFO alu_scoreboard.sv(200) @ 32600: uvm_test_top.env.scb [COMPARE] Transaction Passed! ACT=  x, EXP= 19
+# alu select=0
+# alu select=2
+# UVM_INFO alu_scoreboard.sv(200) @ 33400: uvm_test_top.env.scb [COMPARE] Transaction Passed! ACT=  x, EXP= 20
+# alu select=0
+# alu select=3
+# UVM_INFO alu_scoreboard.sv(200) @ 34200: uvm_test_top.env.scb [COMPARE] Transaction Passed! ACT=  x, EXP= 22
+# alu select=0
+# alu select=2
+# UVM_INFO alu_scoreboard.sv(200) @ 35000: uvm_test_top.env.scb [COMPARE] Transaction Passed! ACT=  x, EXP= 23
+# alu select=2
+# alu select=1
+# UVM_INFO alu_scoreboard.sv(200) @ 35800: uvm_test_top.env.scb [COMPARE] Transaction Passed! ACT=  x, EXP=  0
+# alu select=2
+# alu select=2
+# UVM_INFO alu_scoreboard.sv(200) @ 36600: uvm_test_top.env.scb [COMPARE] Transaction Passed! ACT=  x, EXP= 45
+# alu select=1
+# alu select=0
+# UVM_INFO alu_scoreboard.sv(200) @ 37400: uvm_test_top.env.scb [COMPARE] Transaction Passed! ACT=  x, EXP= 14
+# alu select=0
+# alu select=0
+# UVM_INFO alu_scoreboard.sv(200) @ 38200: uvm_test_top.env.scb [COMPARE] Transaction Passed! ACT=  x, EXP= 18
+# alu select=0
+# alu select=3
+# UVM_INFO alu_scoreboard.sv(200) @ 39000: uvm_test_top.env.scb [COMPARE] Transaction Passed! ACT=  x, EXP= 19
+# alu select=0
+# alu select=2
+# UVM_INFO alu_scoreboard.sv(200) @ 39800: uvm_test_top.env.scb [COMPARE] Transaction Passed! ACT=  x, EXP= 17
+# alu select=2
+# UVM_INFO verilog_src/uvm-1.1d/src/base/uvm_objection.svh(1268) @ 40210: reporter [TEST_DONE] 'run' phase is ready to proceed to the 'extract' phase
+# 
+# --- UVM Report Summary ---
+# 
+# ** Report counts by severity
+# UVM_INFO :   53
+# UVM_WARNING :    0
+# UVM_ERROR :    0
+# UVM_FATAL :    0
+# ** Report counts by id
+# [COMPARE]    49
+# [Questa UVM]     2
+# [RNTST]     1
+# [TEST_DONE]     1
+# ** Note: $finish    : C:/questasim_10.4e/win32/../verilog_src/uvm-1.1d/src/base/uvm_root.svh(430)
+#    Time: 40210 ns  Iteration: 54  Instance: /top
+# 1
+# Break in Task uvm_pkg/uvm_root::run_test at C:/questasim_10.4e/win32/../verilog_src/uvm-1.1d/src/base/uvm_root.svh line 430
+#  quit -sim
+quit
+# End time: 11:25:03 on Aug 01,2023, Elapsed time: 0:03:54
+# Errors: 0, Warnings: 3
