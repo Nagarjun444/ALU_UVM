@@ -1,2 +1,2 @@
-# ALU_UVM
-ALU_UVM verification
+# ALU UVM
+ALU UVM verification usig questa sim 10.4e Tool
